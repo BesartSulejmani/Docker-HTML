@@ -40,13 +40,13 @@ Contains "index.html" which you can alter to your liking. This file will be stor
 
 ## Build image
 
-'docker build -t my-page:v1.0 .'
+```docker build -t my-page:v1.0 .```
 
 Make sure you run the command in the directory where the \'Dockerfile' is stored.
 
 ## Running the container
 
-'docker run –d –p 8080:80 my-page:v1.0'
+```docker run –d –p 8080:80 my-page:v1.0```
 
 This will run the container in detached mode (-d) and publishes the containers ports to the host (-p),external port of 8080 and an internal container port of 80. The image to use is my-page with a tag of v1.0.
 
@@ -58,14 +58,14 @@ Browse to http://localhost:8080 and you should see the webpage containing a mess
 
 ## Cleanup
 
-'docker ps -a'
+```docker ps -a```
 
 Shows all running containers with a CONTAINER ID. Copy the ID that is attached to the IMAGE: my-page:v1.0.
 
-'docker stop [CONTAINER ID]'
+```docker stop [CONTAINER ID]```
 
 Stops the container.
 
-'docker rm [CONTAINER ID]'
+```docker rm [CONTAINER ID]```
 
 Removes the container.
